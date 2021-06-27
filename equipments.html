@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>Equipments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="equipments.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="loading.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+</head>
+<body>
+    <div class="body">
+        <div class="loader-wrapper" id="overlay">
+            <div class="loading">
+                <div class="yellow"></div>
+                <div class="red"></div>
+                <div class="blue"></div>
+                <div class="violet"></div>
+            </div>
+        </div>
+        <nav>
+            <ul class="topnav" id="onclickdropdown">
+                <li><a href="home.html">Home</a></li> 
+                <li class="topnav-right"><a href="aboutus.html">About Us</a></li>
+                <li class="topnav-right" style="border-bottom: 2px solid white;"><a href="equipments.html">Equipments</a></li>
+                <li class="topnav-right"><a href="fat-tree.html">Fat Tree</a></li>
+                <li class="topnav-right"><a href="DCN.html">Data Center Network</a></li>
+                <li class="topnav-right"><a href="datacenter.html">Data Center</a></li> 
+                <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">	
+                &#9776;</a></li>
+            </ul>
+        </nav>
+        <div id="title">
+            <div class="header">
+                <h1>Equipments</h1>
+            </div>
+
+            <a href="#switch">
+                <div class="card1">
+                    <img src="images/switches.jpg" alt="Switches" style="width:100%">
+                    <div class="container1">
+                        <h2>Switches</h2> 
+                    </div>
+                </div>
+            </a>        
+
+            <a href="#cable">
+                <div class="card1">
+                    <img src="images/cables.jpg" alt="Cables" style="width:100%">
+                    <div class="container1">
+                      <h2>Cables</h2>  
+                  </div>
+              </div>
+          </a>
+      </div>
+
+      <div class="content">
+        <div id="switch">
+            <h1 class="head">Switches</h1><hr>
+            <ol>
+                <li>Core Switch</li>
+                <div class = "row1">
+                    <a href = "https://www.router-switch.com/n5k-c5672up.html" target="_blank" class = "column1" id = "caption"><span class = "text"><h1>Cisco Nexus 5672</h1></span><img src = "images/core1.jpg"></a>
+
+                    <a href = "https://www.router-switch.com/n3k-c3548p-10gx.html" class = "column1" id = "caption"><span class = "text"><h1>Cisco Nexus 3548-X</h1></span><img src = "images/core2.jpg"></a>
+                </div>
+
+                <li>Aggregation Switch</li>
+                <div class = "row1">
+                    <a href = "https://www.router-switch.com/c9500-40x-a.html" class = "column1" id = "caption"><span class = "text"><h1>Cisco Catalyst 9500</h1></span><img src = "images/agg1.jpg"></a>
+
+                    <a href = "https://www.router-switch.com/ws-c3850-48t-l-p-5215.html" class = "column1" id = "caption"><span class = "text"><h1>Cisco Catalyst 3850</h1></span><img src = "images/agg2.jpg"></a>
+                </div>
+                <li>Edge Switch</li>
+                <div class = "row1">
+                    <a href = "https://www.router-switch.com/c9300-48p-a.html" class = "column1" id = "caption"><span class = "text"><h1>Cisco Catalyst 9300</h1></span><img src = "images/edge1.jpg"></a>
+
+                    <a href = "https://www.router-switch.com/ws-c2960x-48fps-l-p-5267.html" class = "column1" id = "caption"><span class = "text"><h1>Cisco Catalyst 2960-X </h1></span><img src = "images/edge2.jpg"></a>
+                </div>
+            </ol>
+        </div>          
+    </div>
+    
+    <div class="content">
+        <div id="cable">
+            <h1 class="head">Cables</h1><hr>
+
+            <div class="details">
+                <div class="d1">
+                    <table>
+                        <tr>
+                            <td><img src="images/cables1.jpg"></td>
+                            <td>
+                                <p>
+                                    <span>Structured Cabling:</span>
+                                In structured cabling a predefined standard-based design with predefined connection points and pathways are used.The structured design contains well organized and labeled cables. As it is properly organized; hence the installation of structured cabling takes more time and cost. But the operational cost will be lower.</p>
+
+                                <p>
+                                    <span>Unstructured Cabling:</span>
+                                Unstructured cabling design is also known as Point to Point. This type of cabling systems does not use any predefined standards, connection points, or pathways.It is difficult to manage.The installation cost is less and it also takes less time to install, but the operational cost is very high.</p>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="d2">
+                    <table>
+                        <tr>
+                            <td>
+                                <p><span>Copper Cables</span></p>
+                                
+                                <p>Copper cables have the capability of transferring data at the highest available bandwidth whether it is about providing connections between servers that are present in solo racks and between the switches which are in the form of a cluster.</p>
+
+                                <p>Copper cables are very cost efficient in case of capital investment. As compared to the fiberoptics cable, the twisted pair of passive cables are 2 to 5 times less costly.Copper cables use much less power and thermal design of copper cables needs less amount of cooling.Data centers can save 100 of kilowatts by using coaxial cables instead of fiber optics.</p>
+                            </td>
+                            <td><img src="images/copper1.jpeg"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="d3">
+                    <table>
+                        <tr>
+                            <td><img src="images/fiber2.jpg"></td>
+                            <td>
+                                <p><span>Fiber Cables</span></p>
+
+                                <p>The optical cable is thinner and lighter than copper cable for the same data rates. The fiber optics provides more flexibility for data center configuration.</p>
+
+                                <p>For longer distances the fiber optics serves better as in case of an active optical cable, the connectors convert the electrical signals to optical ones, and vice-versa.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

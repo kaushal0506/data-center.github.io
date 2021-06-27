@@ -1,0 +1,41 @@
+/* -------Mobile---------- */
+@media screen and (max-width: 1080px){
+
+    nav{
+        overflow: hidden;
+        width: 100%;
+    }
+    ul.topnav li:not(:nth-child(1)){
+        display:none;
+        overflow: hidden;
+    }
+    
+    ul.topnav li.dropdownIcon{
+        display: block;
+        overflow: hidden;
+        float: right;
+    }
+
+    ul.topnav.responsive li.dropdownIcon{
+        position: absolute;
+        top:0;
+        right:0; 
+        overflow: hidden;
+    }
+    ul.topnav.responsive{
+        position: relative ;
+        overflow: hidden;
+    }
+    
+    ul.topnav.responsive li{
+        display: inline;
+        float:none;
+        overflow: hidden;
+    }
+    
+    ul.topnav.responsive li a{
+        display: block;
+        text-align: left;    
+        overflow: hidden;
+    } 
+}

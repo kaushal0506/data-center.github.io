@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>DC Network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DCN.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="loading.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+</head>
+<body>
+    <div class="body">
+        <div class="loader-wrapper" id="overlay">
+            <div class="loading">
+                <div class="yellow"></div>
+                <div class="red"></div>
+                <div class="blue"></div>
+                <div class="violet"></div>
+            </div>
+        </div>
+        <nav>
+            <ul class="topnav" id="onclickdropdown">
+                <li><a href="home.html">Home</a></li> 
+                <li class="topnav-right"><a href="aboutus.html">About Us</a></li>
+                <li class="topnav-right"><a href="equipments.html">Equipments</a></li>
+                <li class="topnav-right"><a href="fat-tree.html">Fat Tree</a></li>
+                <li class="topnav-right" style="border-bottom: 2px solid white;"><a href="DCN.html">Data Center Network</a></li>
+                <li class="topnav-right"><a href="datacenter.html">Data Center</a></li> 
+                <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">    
+                &#9776;</a></li>
+            </ul>
+        </nav>
+        <div id="title">
+
+            <div class="header">
+                <h1>Data Center Network</h1>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Types of DC Topology</h1>
+
+            <div class="dcn-types">
+                <div>
+                    <h3>Three-tier DCN</h3>
+                    <p>The legacy three-tier DCN architecture follows a multi-rooted tree based network topology composed of three layers of network switches, namely access, aggregate, and core layers. The servers in the lowest layers are connected directly to one of the edge layer switches. The aggregate layer switches interconnect together multiple access layer switches. All of the aggregate layer switches are connected to each other by core layer switches. Core layer switches are also responsible for connecting the data center to the Internet. The three-tier is the common network architecture used in data centers.However, three-tier architecture is unable to handle the growing demand of cloud computing. The higher layers of the three-tier DCN are highly oversubscribed. Moreover, scalability is another major issue in three-tier DCN. Major problems faced by the three-tier architecture include, scalability, fault tolerance, energy efficiency, and cross-sectional bandwidth. The three-tier architecture uses enterprise-level network devices at the higher layers of topology that are very expensive and power hungry.</p>
+                </div>
+
+                <div>
+                    <h3>DCell</h3>
+                    <p>DCell is a server-centric hybrid DCN architecture where one server is directly connected to one server. A server in the DCell architecture is equipped with multiple Network Interface Cards (NICs). The DCell follows a recursively built hierarchy of cells. A cell0 is the basic unit and building block of DCell topology arranged in multiple levels, where a higher level cell contains multiple lower layer cells. The cell0 is building block of DCell topology, which contains n servers and one commodity network switch. The network switch is only used to connect the server within a cell0. A cell1 contain k=n+1 cell0 cells, and similarly a cell2 contains k * n + 1 dcell1. The DCell is a highly scalable architecture where a four level DCell with only six servers in cell0 can accommodate around 3.26 million servers. Besides very high scalability, the DCell architecture depicts very high structural robustness. However, cross section bandwidth and network latency is a major issue in DCell DCN architecture.</p>
+                </div>
+
+                <div>
+                    <h3>Fat tree DCN</h3>
+                    <p>Fat tree DCN architecture handles the oversubscription and cross section bandwidth problem faced by the legacy three-tier DCN architecture. Fat tree DCN employs commodity network switches based architecture using Clos topology. The network elements in fat tree topology also follows hierarchical organization of network switches in access, aggregate, and core layers. However, the number of network switches is much larger than the three-tier DCN. The architecture is composed of k pods, where each pod contains, (k/2)2 servers, k/2 access layer switches, and k/2 aggregate layer switches in the topology. The core layers contain (k/2)2 core switches where each of the core switches is connected to one aggregate layer switch in each of the pods. The fat tree topology offers 1:1 oversubscription ratio and full bisection bandwidth. The fat tree architecture uses a customized addressing scheme and routing algorithm. The scalability is one of the major issues in fat tree DCN architecture and maximum number of pods is equal to the number of ports in each switch.</p>
+                    <p><span> <a href="fat-tree.html" class="dt">Calculation</a></span></p>
+                </div> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

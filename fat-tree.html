@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fat-tree.css">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script type="text/javascript" src="js/fat-tree.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <title>Fat Tree</title>
+</head>
+<body>
+    <div class="loader-wrapper" id="overlay">
+        <div class="loading">
+            <div class="yellow"></div>
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="violet"></div>
+        </div>
+    </div>
+    <nav>
+        <ul class="topnav" id="onclickdropdown">
+            <li><a href="home.html">Home</a></li> 
+            <li class="topnav-right"><a href="aboutus.html">About Us</a></li>
+            <li class="topnav-right"><a href="equipments.html">Equipments</a></li>
+            <li class="topnav-right" style="border-bottom: 2px solid white;"><a href="fat-tree.html">Fat Tree</a></li>
+            <li class="topnav-right"><a href="DCN.html">Data Center Network</a></li>
+            <li class="topnav-right"><a href="datacenter.html">Data Center</a></li> 
+            <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">	
+            &#9776;</a></li>
+        </ul>
+    </nav>
+    <div class="container1" id="section-1-gradient">
+        <div class="row">
+            <div class="col-6">
+                <div class="leftSide-col">
+                    <h1 class="large">Fat-tree Construction</h1>        
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container1" id="section-2-gradient">
+        <div class="row">
+            <div class="col-11 ">
+                <div class="rightSide-brief">
+                    <div class="data">
+                        <p class = "data">The fat tree network is a universal network for provably efficient communication. It was invented by Charles E. Leiserson of the Massachusetts Institute of Technology in 1985.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-11 ">
+                <div class="rightSide-brief">
+                    <div class="data">
+                    	<p class = "data">  Fat tree network topology looks like a tree topology. In tree topology, we have same terminologies like Root, parent, child etc. This is mainly used to connect a large number of physical servers/ computers in a large data center. In a tree data structure, every branch has the same thickness. They are all skinny (low-bandwidth).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-11 ">
+                <div class="rightSide-brief">
+                    <div class="data">
+                    	<p class = "data"> In a fat tree, branches nearer the top of the hierarchy are thicker than branches further down the hierarchy. In a telecommunications network, the branches are data links. Switches with k number of ports in a Fat tree topology is called k-ary or k-port Fat tree network topology. From the value of k, we can derive the number of core switches, aggregation switches, edge switches. A set of (k/2) number of aggregation switches and (k/2) number of edge switches are combined together and that is known as a Pod. (k/2)^2 number of core switches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-11 ">
+                <div class="rightSide-brief">
+                    <div class="data">
+
+                    	<h2>Construction<span><a href="javascript:void(0);" onclick="dropDowncontainer()">(Calculate &#8681;) </a></span></h2><hr>
+
+                     <div class="container1">
+                        <div class="row dropdowndata" id="onclickdropdowndata">
+                            <header>
+                               <h1 style="text-align: center;">FAT-TREE Calculation</h1>
+                           </header>    
+                           <center><div class="container1" id="section-2-gradient">
+                               <div class="row">
+                                   <div class ="col-7">
+                                      <form>
+                                        <label class="cal-name" style="color:rgba(0, 0, 0, 0.589); font-size: 25px;">Number of end devices: </label>
+                                        <input min="0" id="end-devices" type="number" placeholder="you want to connect" ></input>
+                                        <br> <br>
+                                        <button type="button" class="calculate" onclick="calculate()">Calculate</button>
+                                    </form>    
+                                </div>
+
+                                <div class="col-5 ">
+                                   <div class="rightSide-brief">
+                                       <div class="data">
+                                        <p id="pods"></p>
+                                        <p id="core-switch"></p>
+                                        <p style="text-decoration: underline;" id="each-pod"></p>
+                                        <p id="agg-switch"></p>
+                                        <p id="edge-switch"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div></center>
+                </div>
+            </div>
+            <ol>
+               <h3>Steps</h3>
+               <p class="data">Let k=4, i.e. each switch has 4 ports.</p>
+
+               <li>Number of core switches is (k/2)^2 = 4 core switches. Number of pods = k = 4.</li>
+               <li>Each pod consists of (k/2)=(4/2)=2 aggregation switches and (k/2)=(4/2)=2 edge switches.</li>
+               <li>Each aggregation switch within a pod is connected to (k/2)=(4/2)=2 core switches and (k/2)=(4/2)=2 edge switches.</li>
+               <li>Each edge switch within a pod is connected to (k/2)=(4/2)=2 servers and (k/2)=(4/2)=2 aggregation switches. That means each pod will be connected to (k/2)^2=(4/2)^2=4 servers.</li>
+
+               <p class="data">Hence the maximum number of servers that can be connected to the network is (k^3)/4=16 servers.</p>
+           </ol>
+
+           <img src="images/fat-tree.png">
+
+       </div>
+   </div>
+</div>
+</div>
+</div>
+</body>
+</html>
